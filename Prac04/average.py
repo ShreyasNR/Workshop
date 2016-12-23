@@ -1,3 +1,11 @@
 def list_avg(L):
-    return sum(L)/len(L)
-print(list_avg([1,2,3]))
+    try:
+     s =  sum(L)/len(L)
+    except TypeError:
+        print('Not all elements are numeric')
+    except ZeroDivisionError:
+        print('Empty list')
+    except:
+        print('unknown error')
+    return s
+print(list_avg([21,6,8]))
